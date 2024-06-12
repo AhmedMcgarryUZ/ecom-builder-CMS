@@ -1,5 +1,5 @@
-export const myStore = defineStore("myStore", () => {
-  const sayHello = (name: string) => `Hello ${name}`;
+export const myStore = defineStore('myStore', () => {
+  const sayHello = (name: string) => `Hello ${name}`
 
-  return { sayHello };
-});
+  return { sayHello }
+})
