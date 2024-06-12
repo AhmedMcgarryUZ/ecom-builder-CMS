@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root,
+    .light {
+      --primary: theme("colors.slate.900");
+      --secondary: theme("colors.slate.700");
+  
+      --surface: theme("colors.slate.100");
+      --surface-low: theme("colors.slate.200");
+      --surface-high: theme("colors.slate.50");
+  
+      --clear: theme("colors.slate.800");
+      --clear-inverse: theme("colors.white");
+      --subtle: theme("colors.slate.400");
+      --subtle-inverse: theme("colors.slate.300");
+    }
+  
+    .dark {
+        --surface: theme("colors.slate.200");
+        --surface-low: theme("colors.slate.100");
+        --surface-high: theme("colors.slate.50");
+    
+        --clear: theme("colors.slate.900");
+        --clear-inverse: theme("colors.white");
+        --subtle: theme("colors.slate.700");
+        --subtle-inverse: theme("colors.slate.200");
+    }
+  }
+
+
+  @layer utilities {
+    .full-bleed {
+        @apply !max-w-none w-full
+    }
+  }
