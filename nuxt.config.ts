@@ -12,6 +12,6 @@ export default defineNuxtConfig({
     storesDirs: ['stores']
   },
   extends: [
-    ['../ecom-builder-fe', { overrides: { prefix: 'Fe' } }]
+    ['../ecom-builder-fe']
   ]
 })
