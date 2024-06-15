@@ -1,7 +1,7 @@
 <template>
   <Suspense>
     <template #default>
-      <div class="bg-surface">
+      <div class="overflow-hidden rounded shadow bg-surface light">
         <HeaderGlobal />
         <HeaderNav />
         <PageComponent v-for="widget in rootElements" :key="widget.id" :widget="widget" :page-data="data" />
