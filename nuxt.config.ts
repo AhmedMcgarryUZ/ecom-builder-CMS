@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  components: [{
+    path: '../ecom-builder-fe/components',
+    global: true
+  }, {
+    path: '~/components',
+    global: true
+  }],
   devtools: { enabled: true },
   devServer: {
     port: 3001

@@ -19,14 +19,14 @@
     }
   
     .dark {
-        --surface: theme("colors.slate.200");
-        --surface-low: theme("colors.slate.100");
-        --surface-high: theme("colors.slate.50");
+        --surface: theme("colors.slate.800");
+        --surface-low: theme("colors.slate.900");
+        --surface-high: theme("colors.slate.700");
     
-        --clear: theme("colors.slate.900");
-        --clear-inverse: theme("colors.white");
-        --subtle: theme("colors.slate.700");
-        --subtle-inverse: theme("colors.slate.200");
+        --clear: theme("colors.slate.50");
+        --clear-inverse: theme("colors.slate.900");
+        --subtle: theme("colors.slate.500");
+        --subtle-inverse: theme("colors.slate.700");
     }
   }
 

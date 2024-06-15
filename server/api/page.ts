@@ -15,9 +15,22 @@ export default defineEventHandler(() => {
           children: []
         },
         {
+          is: 'ContainerCarousel',
+          id: 14,
+          parentId: 'root',
+          slots: [2],
+          children: [],
+          options: {
+            perPage: 1
+          },
+          showArrows: false,
+          fullBleed: true,
+          class: 'hero'
+        },
+        {
           is: 'BannerLarge',
           id: 2,
-          parentId: 'root',
+          parentId: '14',
           slots: [],
           children: []
         },
