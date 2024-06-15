@@ -1,10 +1,15 @@
 <template>
   <div class="">
-    <p>My Layout</p>
-    <!-- Navigation -->
-    <!-- Editor -->
-    <!-- Canvas -->
-    <!-- Footer -->
+    <div class="flex h-full min-h-screen font-secondary text-clear">
+      <CmsSidebar />
+      <div class="flex flex-col w-full h-full max-h-screen">
+        <CmsNav />
+
+        <div class="w-full h-full p-12 overflow-y-scroll bg-surface-low grow">
+          <NuxtPage />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

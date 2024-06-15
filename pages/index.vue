@@ -1,5 +1,10 @@
 <template>
-  <div />
+  <Suspense>
+    <template #default>
+      <CmsCanvas />
+    </template>
+    <template #fallback>
+      <PageLoader />
+    </template>
+  </Suspense>
 </template>
-
-<script setup lang="ts"></script>
