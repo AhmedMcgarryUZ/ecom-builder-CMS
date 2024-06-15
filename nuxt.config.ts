@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     global: true
   }, {
     path: '~/components',
+    prefix: 'Cms',
     global: true
   }],
   devtools: { enabled: true },
