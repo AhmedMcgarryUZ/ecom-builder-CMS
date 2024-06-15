@@ -1,15 +1,9 @@
 <template>
   <div class="">
-    <!-- <NuxtPage /> -->
     <div class="flex h-full min-h-screen font-secondary text-clear">
-      <div class="p-4 bg-surface min-w-[32px] shrink text-clear h-[100dvh]">
-        Side Bar
-      </div>
-
+      <CmsSidebar />
       <div class="flex flex-col w-full h-full max-h-screen">
-        <div class="flex justify-center py-4 bg-surface">
-          Nav Bar
-        </div>
+        <CmsNav />
 
         <div class="w-full h-full p-12 overflow-y-scroll bg-surface-low grow">
           <NuxtPage />

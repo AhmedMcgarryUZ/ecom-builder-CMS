@@ -1,18 +1,24 @@
 <template>
   <div v-if="widget">
-    <component :is="`Fe${widget.is}`" v-if="widget.slots.length" v-bind="widget">
-      <template
-        v-for="child in childWidgets"
-        :key="child.id"
-      >
-        <PageComponent
-          v-if="child"
-          :widget="child"
-          :page-data="pageData"
-        />
-      </template>
-    </component>
-    <component :is="`Fe${widget.is}`" v-else v-bind="widget" />
+    <CmsElementWrapper v-if="widget.slots.length" v-bind="widget">
+      <component :is="widget.is" v-if="widget.slots.length" v-bind="widget">
+        <template
+          v-for="child in childWidgets"
+          :key="child.id"
+        >
+          <CmsElementWrapper v-bind="child">
+            <PageComponent
+              v-if="child"
+              :widget="child"
+              :page-data="pageData"
+            />
+          </CmsElementWrapper>
+        </template>
+      </component>
+    </CmsElementWrapper>
+    <CmsElementWrapper v-else v-bind="widget">
+      <component :is="widget.is" v-bind="widget" />
+    </CmsElementWrapper>
   </div>
 </template>
 
@@ -21,10 +27,10 @@ import { computed } from 'vue'
 import type { Page } from '~/types/page'
 import type { Widget } from '~/types/widget'
 
-  interface Props {
-    widget: Widget;
-    pageData: Page;
-  }
+    interface Props {
+      widget: Widget;
+      pageData: Page;
+    }
 
 const props = defineProps<Props>()
 
