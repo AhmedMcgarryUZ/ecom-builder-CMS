@@ -14,13 +14,7 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'ElementWrapper'
-})
-
 const elementStore = useElementStore()
-
 const isHovering = ref()
-
 const attributes = useAttrs()
 </script>
