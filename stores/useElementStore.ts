@@ -1,8 +1,7 @@
 const useElementStore = defineStore('useElementStore', () => {
   const element = ref()
-  const isEditing = ref()
+  const isEditing = ref(false)
 
-  const editActive = computed(() => isEditing)
   const activeElement = computed(() => element)
   const isIdActive = computed(() => (id: string | null) => element.value?.id === id)
 
@@ -10,12 +9,14 @@ const useElementStore = defineStore('useElementStore', () => {
     element.value = widget
   }
 
-  const toggleEditActive = () => isEditing.value = !isEditing.value
+  const toggleEditActive = () => {
+    isEditing.value = !isEditing.value
+  }
 
   return {
     activeElement,
     isIdActive,
-    editActive,
+    isEditing,
     toggleEditActive,
     setActiveElement
   }
