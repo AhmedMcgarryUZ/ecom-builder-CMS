@@ -91,7 +91,7 @@ export default defineEventHandler(() => {
           subtitle: 'Womens',
           id: 9,
           parentId: 'root',
-          slots: [4],
+          slots: [10],
           children: []
         },
         {
@@ -107,7 +107,7 @@ export default defineEventHandler(() => {
           subtitle: 'Womens',
           id: 11,
           parentId: 'root',
-          slots: [4],
+          slots: [12],
           children: [],
           options: {
             perPage: 3

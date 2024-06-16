@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="" :class="[getCmsMode]">
     <div class="flex h-full min-h-screen font-secondary text-clear">
       <CmsSidebar />
       <div class="flex flex-col w-full h-full max-h-screen">
@@ -13,4 +13,6 @@
   </div>
 </template>
 
-<script setup />
+<script setup lang="ts">
+const { getCmsMode } = useThemeStore()
+</script>

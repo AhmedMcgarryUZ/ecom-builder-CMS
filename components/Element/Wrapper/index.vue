@@ -1,26 +1,23 @@
 <template>
-  <div class="w-full p-4 border-transparent rounded border-5" :class="{ 'border-5 border-emerald-600 bg-emerald-900/20 z-10': isHovering}" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
+  <div
+    v-if="editActive"
+    class="w-full p-4 border-transparent rounded-sm border-5"
+    :class="{ 'border-5 border-emerald-600 bg-emerald-900/20 z-10': isIdActive(attributes?.id as string) }"
+    @mouseover.stop="setActiveElement(attributes)"
+    @mouseleave.stop="setActiveElement(attributes)"
+  >
     <slot />
   </div>
+
+  <slot v-else />
 </template>
 
 <script setup lang="ts">
 defineOptions({
   name: 'ElementWrapper'
 })
-const { setActiveElement } = useElementStore()
 
-const isHovering = ref()
+const { isIdActive, setActiveElement, editActive } = useElementStore()
 
 const attributes = useAttrs()
-
-const handleMouseOver = () => {
-  isHovering.value = true
-  setActiveElement(attributes)
-}
-
-const handleMouseLeave = () => {
-  isHovering.value = false
-  setActiveElement(attributes)
-}
 </script>

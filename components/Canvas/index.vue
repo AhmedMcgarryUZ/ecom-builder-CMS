@@ -1,10 +1,14 @@
 <template>
-  <div class="overflow-auto rounded shadow resize-x bg-surface light">
+  <div class="container overflow-auto rounded shadow resize-x bg-surface light">
     <HeaderGlobal />
     <HeaderNav />
-    <CmsElementWrapper v-for="widget in rootElements" v-bind="widget" :key="widget.id">
-      <CmsPageComponent :widget="widget" :page-data="data" />
-    </CmsElementWrapper>
+    <CmsPageComponent
+      v-for="widget in rootElements"
+      v-bind="widget"
+      :key="widget.id"
+      :widget="widget"
+      :page-data="data"
+    />
     <Footer />
   </div>
 </template>
